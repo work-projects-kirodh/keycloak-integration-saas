@@ -12,14 +12,14 @@ import os
 from keycloak import KeycloakAdmin, KeycloakGetError
 
 # please fill these in for you admin user:
-KEYCLOAK_SERVER_URL = "https://keycloak.afis.co.za/"
+KEYCLOAK_SERVER_URL = "https://kk.as.co.za/"
 # test
-KEYCLOAK_REALM = "SAAS-TEST"
+KEYCLOAK_REALM = "SS-TT"
 # Production
 # KEYCLOAK_REALM = "AS"
 
-ADMIN_USERNAME = "saas@csir.co.za"
-ADMIN_PASSWORD = "saas"
+ADMIN_USERNAME = "ss@cr.co.za"
+ADMIN_PASSWORD = "ss"
 
 # -------------------------------------------------------
 # 1. Connect using admin credentials
