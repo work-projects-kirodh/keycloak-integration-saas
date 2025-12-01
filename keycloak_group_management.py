@@ -105,16 +105,16 @@ if __name__ == "__main__":
     )
 
     # TODO NOTE:: you will need to parameterize this probably...
-    email_to_move = "kj@gmail.com"
+    email_to_move = "kboodhraj@gmail.com"
     old_group = "/afis_stats/fire_stats"  # e.g. path of group to remove from
-    new_group = "/gmail/insidegmail"  # path of group to add to
+    new_group = "/VIEWER"  # path of group to add to
 
 
     ####################################################
     ## select a function here to carry out an operation
 
-    ### get all groups in realm
-    # manager.get_all_groups()
+    ## get all groups in realm
+    manager.get_all_groups()
 
     ### To move a user between groups
     # manager.move_user_between_groups(email_to_move, old_group, new_group)
