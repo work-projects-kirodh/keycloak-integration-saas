@@ -12,14 +12,14 @@ import os
 from keycloak import KeycloakAdmin, KeycloakGetError
 
 # please fill these in for you admin user:
-KEYCLOAK_SERVER_URL = "https://kk.as.co.za/"
+KEYCLOAK_SERVER_URL = "https://keycloak.afis.co.za/"
 # test
-KEYCLOAK_REALM = "SS-TT"
+KEYCLOAK_REALM = "SAAS-TEST"
 # Production
 # KEYCLOAK_REALM = "AS"
 
-ADMIN_USERNAME = "ss@csir.co.za"
-ADMIN_PASSWORD = "ss"
+ADMIN_USERNAME = "saas@csir.co.za"
+ADMIN_PASSWORD = "saas"
 
 # -------------------------------------------------------
 # 1. Connect using admin credentials
@@ -151,13 +151,21 @@ def create_user(email, first_name, last_name, password, groups=None):
     return user_id
 
 
+def delete_a_user(user_id):
+    try:
+        keycloak_admin.delete_user(user_id)
+        print(f"User {user_id} deleted successfully.")
+    except Exception as e:
+        print(f"Error deleting user {user_id}: {e}")
+
+
 if __name__ == '__main__':
 
     # Your values go here:
     # -------------------------------------------------------
     # 3. Run example
     # -------------------------------------------------------
-    # change these as well please.
+    ## change these as well please.
     new_user_id = create_user(
         email="kj@gmail.com",
         first_name="Kiro",
@@ -168,3 +176,8 @@ if __name__ == '__main__':
     )
 
     print("\nFinal User ID:", new_user_id)
+
+    # delete the user
+
+    user_id = "9887633f-2f60-4c67-9c3d-a62d6604cf2d"
+    delete_a_user(user_id)
