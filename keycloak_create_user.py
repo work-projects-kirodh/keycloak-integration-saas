@@ -12,8 +12,11 @@ import os
 from keycloak import KeycloakAdmin, KeycloakGetError
 
 # please fill these in for you admin user:
-KEYCLOAK_SERVER_URL = "https://keycloak.afis.co.za/"
-KEYCLOAK_REALM = "AS"
+KEYCLOAK_SERVER_URL = "https://kk.as.co.za/"
+# test
+KEYCLOAK_REALM = "SS-TT"
+# Production
+# KEYCLOAK_REALM = "AS"
 
 ADMIN_USERNAME = "ss@csir.co.za"
 ADMIN_PASSWORD = "ss"
@@ -160,7 +163,7 @@ if __name__ == '__main__':
         first_name="Kiro",
         last_name="Bood",
         password="mumba",
-        # Note only the root groups work, no sub groups. Use other code to shift users into groups.
+        # Note only the root groups work, no subgroups. Use other code to shift users into groups.
         groups=["API"] # keep fixed...
     )
 
